@@ -1,0 +1,8 @@
+
+<div class="botaoGetDepartamentos"><button class="botao"  (click)="alternarVisibilidade()">Listar Departamentos</button>
+<div *ngIf="mostrarDepartamentos">
+<div *ngFor="let departamento of departamentos">
+    <p >{{ departamento.nome }} - {{ departamento.sigla }}</p>
+  </div>
+</div>
+</div>

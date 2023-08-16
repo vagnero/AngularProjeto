@@ -1,0 +1,10 @@
+<p>cadastrar-departamento works!</p>
+<form (submit)="cadastrar()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" [(ngModel)]="novoDepartamento.nome" required>
+    
+    <label for="sigla">Sigla:</label>
+    <input type="text" id="sigla" [(ngModel)]="novoDepartamento.sigla" required>
+    
+    <button type="submit">Cadastrar</button>
+  </form>
