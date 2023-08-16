@@ -6,15 +6,18 @@ import { DepartamentoService } from '../departamento.service';
   templateUrl: './cadastrar-departamento.component.html',
   styleUrls: ['./cadastrar-departamento.component.css']
 })
-export class CadastrarDepartamentoComponent {
+export class CadastrarDepartamentoComponent implements OnInit {
+
   novoDepartamento: any = {
     nome: '',
     sigla: ''
   };
+
   constructor(private departamentoService: DepartamentoService) { }
 
   ngOnInit(): void {
   }
+
   cadastrar(): void {
     this.departamentoService.cadastrarDepartamento(this.novoDepartamento).subscribe(
       response => {

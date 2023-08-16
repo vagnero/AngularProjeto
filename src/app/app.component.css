@@ -1,0 +1,23 @@
+.imagem-container {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 20px;
+    bottom: 30px ;
+}
+
+.imagens {
+    height: 50px;
+    width: 50px;
+}
+
+.texto {
+    position: absolute;
+    left: 50%; /* Centraliza horizontalmente */
+    bottom: -45px; /* Move o texto para cima */
+    transform: translateX(-50%); /* Corrige a centralização */
+    text-align: center;
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+}

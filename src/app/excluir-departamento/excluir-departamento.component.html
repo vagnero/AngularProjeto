@@ -1,0 +1,18 @@
+<br>
+<h2>Excluir Departamento</h2>
+<div>
+  <h3>Selecione um departamento para excluir:</h3>
+  <ul>
+    <li *ngFor="let departamento of departamentos">
+      {{ departamento.nome }}
+      <a (click)="exibirMensagemExclusao(departamento)">
+        <img src="assets/lixeira.png" alt="Excluir" height="20px" width="20px">
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="mostrarMensagemExclusao">
+  <p>Deseja realmente excluir o departamento "{{ departamentoSelecionado?.nome }}"?</p>
+  <button (click)="excluirDepartamento()">Confirmar Exclusão</button>
+</div>

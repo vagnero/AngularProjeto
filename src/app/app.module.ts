@@ -7,18 +7,25 @@ import { ListaDepartamentosComponent } from './lista-departamentos/lista-departa
 import { DepartamentoService } from './departamento.service';
 import { CadastrarDepartamentoComponent } from './cadastrar-departamento/cadastrar-departamento.component'; // Importe o serviço
 import { FormsModule } from '@angular/forms';
+import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+import { EditarDepartamentoComponent } from './editar-departamento/editar-departamento.component';
+import { ExcluirDepartamentoComponent } from './excluir-departamento/excluir-departamento.component';
+import { CadastrarFuncionarioComponent } from './cadastrar-funcionario/cadastrar-funcionario.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListaDepartamentosComponent,
     CadastrarDepartamentoComponent,
+    PaginaInicialComponent,
+    EditarDepartamentoComponent,
+    ExcluirDepartamentoComponent,
+    CadastrarFuncionarioComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserModule,
     FormsModule,
   ],
   providers: [DepartamentoService], // Adicione o serviço aos providers

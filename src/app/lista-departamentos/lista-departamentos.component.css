@@ -1,11 +1,37 @@
-.botaoGetDepartamentos{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    position: absolute;
-    left: 2%;
+img{
+    width: 50px;
+    height: 50px;
 }
-.botao{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    
-}
+.funcionarios-list {
+    max-height: 200px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical quando necessário */
+  }
+  .Departamento{
+    font-size: 120%;
+  }
+  .funcionariosImagem{
+    display: flex;
+    margin-right: 5%;
+  }
+  .lixeira{
+    display: flex;
+    margin-right: 25%;
+    margin-top: 5%;
+
+  }
+  .editar{
+    display: flex;
+    margin-left: 90%;
+    margin-top: 5%;
+  }
+
+  .fotoFuncionario{
+    display: flex;
+    height: 100px; 
+    width: 150px; 
+  }
+  .botao {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+  }

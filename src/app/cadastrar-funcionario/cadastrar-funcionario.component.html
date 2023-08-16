@@ -1,0 +1,19 @@
+<h2>Cadastrar Funcionário</h2>
+
+<form (ngSubmit)="cadastrarFuncionario()">
+  <div>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" [(ngModel)]="novoFuncionario.nome" name="nome" required>
+  </div>
+  <div>
+    <label for="foto">Foto (URL):</label>
+    <input type="text" id="foto" [(ngModel)]="novoFuncionario.foto" name="foto" required>
+  </div>
+  <div>
+    <label for="rg">RG:</label>
+    <input type="text" id="rg" [(ngModel)]="novoFuncionario.rg" name="rg" required>
+  </div>
+  <div>
+    <button type="submit">Cadastrar</button>
+  </div>
+</form>

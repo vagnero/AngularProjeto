@@ -1,0 +1,33 @@
+<br>
+<h2>Editar Departamentos</h2>
+<div>
+  <h3>Selecione um departamento para editar:</h3>
+  <ul>
+    <li *ngFor="let departamento of departamentos">
+      {{ departamento.nome }}
+      <a (click)="toggleFormularioEdicao(departamento)">
+        <img src="assets/editarFun.png" alt="Editar" height="20px" width="20px">
+      </a>
+      <div *ngIf="mostrarFormularioEdicao && departamentoSelecionado === departamento">
+        <form>
+            <div *ngIf="departamentoSelecionado" class="formulario-edicao">
+                <br>
+                <form>
+                  <div>
+                    <label for="nome">Nome do Departamento:</label>
+                    <input type="text" id="nome" name="nome" [(ngModel)]="departamentoSelecionado.nome">
+                  </div>
+                  <div>
+                    <label for="sigla">Sigla do Departamento:</label>
+                    <input type="text" id="sigla" name="sigla" [(ngModel)]="departamentoSelecionado.sigla">
+                  </div>
+                  <button (click)="salvarEdicao()">Salvar</button>
+                </form>
+                <br>
+              </div>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,8 @@
+.formulario-edicao {
+   /* float: right; /* Posiciona o elemento à direita */
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+   /* margin-left: auto; /* Centraliza horizontalmente */
+    /*margin-right: 1000px; /* Adiciona um espaçamento à direita */
+  }

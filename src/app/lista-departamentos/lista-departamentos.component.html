@@ -1,8 +1,37 @@
+<br>
 
-<div class="botaoGetDepartamentos"><button class="botao"  (click)="alternarVisibilidade()">Listar Departamentos</button>
-<div *ngIf="mostrarDepartamentos">
 <div *ngFor="let departamento of departamentos">
-    <p >{{ departamento.nome }} - {{ departamento.sigla }}</p>
+  {{ departamento.nome }} - {{ departamento.sigla}}
+  <a (click)="exibirFuncionarios(departamento)">
+    <img class="funcionariosImagem" src="assets/funcionarios.png" alt="Exibir Funcionários" height="12px" width="12px">
+  </a>
+  <div class="funcionarios-list" *ngIf="mostrarFuncionarios && departamento === departamentoSelecionado">
+    <form (ngSubmit)="cadastrarFuncionario()">
+      <input [(ngModel)]="novoFuncionario.nome" name="nome" placeholder="Nome">
+      <input [(ngModel)]="novoFuncionario.foto" name="foto" placeholder="Foto">
+      <input [(ngModel)]="novoFuncionario.rg" name="rg" placeholder="RG">
+      <button type="submit">Cadastrar Novo Funcionário</button>
+    </form>
+    <ul>
+      <li *ngFor="let funcionario of funcionarios">
+        Nome: {{ funcionario.nome }} - RG: {{ funcionario.rg }}  
+        <img class="fotoFuncionario" [src]="funcionario.foto" alt="Foto do Funcionário">
+        <br>
+        <button class="botao" (click)="deletarFuncionario(funcionario.id)">
+          <img class="icon" src="assets/lixeira.png" alt="Deletar" height="16px" width="16px">
+        </button>
+        <button class="botao" (click)="exibirFormularioEdicao(funcionario)">
+          <img class="editar" src="assets/editarFun.png" alt="Editar" height="8px" width="8px">
+        </button>
+        <div *ngIf="funcionarioSelecionado && funcionario.id === funcionarioSelecionado.id">
+          <form (ngSubmit)="salvarEdicaoFuncionario()">
+            <input [(ngModel)]="funcionarioSelecionado.nome" name="nome" placeholder="Nome">
+            <input [(ngModel)]="funcionarioSelecionado.foto" name="foto" placeholder="Foto">
+            <input [(ngModel)]="funcionarioSelecionado.rg" name="rg" placeholder="RG">
+            <button type="submit">Salvar Edição</button>
+          </form>
+        </div>
+      </li>
+    </ul>
   </div>
-</div>
 </div>
