@@ -3,11 +3,13 @@
 <div>
   <h3>Selecione um departamento para editar:</h3>
   <ul>
-    <li *ngFor="let departamento of departamentos">
+    <li class="departamentos" *ngFor="let departamento of departamentos">
       {{ departamento.nome }}
+      <br>
       <a (click)="toggleFormularioEdicao(departamento)">
         <img src="assets/editarFun.png" alt="Editar" height="20px" width="20px">
       </a>
+      <hr>
       <div *ngIf="mostrarFormularioEdicao && departamentoSelecionado === departamento">
         <form>
             <div *ngIf="departamentoSelecionado" class="formulario-edicao">

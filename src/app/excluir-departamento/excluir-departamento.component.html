@@ -3,11 +3,13 @@
 <div>
   <h3>Selecione um departamento para excluir:</h3>
   <ul>
-    <li *ngFor="let departamento of departamentos">
+    <li class="departamentos" *ngFor="let departamento of departamentos">
       {{ departamento.nome }}
+      <br>
       <a (click)="exibirMensagemExclusao(departamento)">
         <img src="assets/lixeira.png" alt="Excluir" height="20px" width="20px">
       </a>
+      <hr>
     </li>
   </ul>
 </div>

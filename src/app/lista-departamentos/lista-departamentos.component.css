@@ -1,10 +1,18 @@
 img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 .funcionarios-list {
     max-height: 200px; /* Defina a altura máxima desejada */
     overflow-y: auto; /* Adiciona a barra de rolagem vertical quando necessário */
+
+      /* float: right; /* Posiciona o elemento à direita */
+       background-color: #f2f2f2;
+       padding: 10px;
+       border: 1px solid #ccc;
+      /* margin-left: auto; /* Centraliza horizontalmente */
+       /*margin-right: 1000px; /* Adiciona um espaçamento à direita */
+     
   }
   .Departamento{
     font-size: 120%;
@@ -34,4 +42,30 @@ img{
     all: unset;
     cursor: pointer;
     outline: revert;
+  }
+
+  .botaoFunc{
+    background-color: #5adbb5;
+    width: 100px;
+    height: 36px;
+
+  }
+  .departamentos{
+    font-size: 140%;
+    
+  }
+  button{
+    height: 30px;
+    position: relative;
+    right: -2%;
+    height: 30px;
+  }
+  input{
+    height: 30px;
+  }
+  .botaoCadastro{
+    height: 30px;
+    position: relative;
+    right: -2%;
+    height: 30px;
   }

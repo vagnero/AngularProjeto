@@ -1,0 +1,11 @@
+input{
+    height: 30px;
+}
+button{
+    position: relative;
+    right: -2%;
+    height: 30px;
+}
+label{
+    font-size: 130%;
+}

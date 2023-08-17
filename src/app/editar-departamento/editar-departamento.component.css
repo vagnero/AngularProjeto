@@ -6,3 +6,16 @@
    /* margin-left: auto; /* Centraliza horizontalmente */
     /*margin-right: 1000px; /* Adiciona um espaçamento à direita */
   }
+  .departamentos{
+    font-size: 140%;
+  }
+  img{
+    height: 40px;
+    width: 40px;
+  }
+  input{
+    height: 30px;
+  }
+  button{
+    height: 30px;
+  }
